@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useProducts } from '../context/ProductContext';
 import { useCategories } from '../context/CategoryContext';
 import { useCart } from '../context/CartContext';
-import { Box, Container, Grid, Typography, Card, CardMedia, CardContent, CardActions, Button, Chip, Paper, TextField, MenuItem, Select, FormControl, InputLabel, Pagination, Breadcrumbs, Link as MuiLink } from '@mui/material';
+import { Box, Container, Grid, Typography, Card, CardMedia, CardContent, CardActions, Button, Chip, Paper, TextField, MenuItem, Select, FormControl, InputLabel, Pagination, Breadcrumbs, Link as MuiLink, IconButton } from '@mui/material';
 import { ShoppingCart, FavoriteBorder, Favorite, Search, FilterList, Sort } from '@mui/icons-material';
 
 const ProductsPage = () => {
