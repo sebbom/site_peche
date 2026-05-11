@@ -1,19 +1,21 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Typography, Paper } from '@mui/material';
 
-const ${page} = () => {
+const ProfilePage = () => {
   return (
-    <div className="${page.toLowerCase()}-page">
-      <Container maxWidth="sm" style={{ padding: '60px 0' }}>
-        <Typography variant="h3" style={{ marginBottom: '24px', fontWeight: '700', textAlign: 'center' }}>
-          {${page.replace(/Page$/, '')}}
-        </Typography>
-        <Typography variant="body1" style={{ color: '#666', textAlign: 'center' }}>
-          Page en construction - Coming Soon!
-        </Typography>
+    <div className="profilepage-page">
+      <Container maxWidth="lg" sx={{ padding: '60px 0' }}>
+        <Paper sx={{ padding: '40px', borderRadius: '8px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+          <Typography variant="h3" sx={{ marginBottom: '20px', fontWeight: '700' }}>
+            Profile
+          </Typography>
+          <Typography variant="body1" sx={{ color: '#555', lineHeight: '1.8' }}>
+            Page en construction. Revenez bientôt pour découvrir notre contenu!
+          </Typography>
+        </Paper>
       </Container>
     </div>
   );
 };
 
-export default ${page};
+export default ProfilePage;
