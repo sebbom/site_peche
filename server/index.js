@@ -4,6 +4,10 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const dotenv = require('dotenv');
+
+// Load environment variables
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
@@ -70,6 +74,7 @@ app.use(errorMiddleware);
 const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
+  console.log(`MongoDB URI: ${process.env.MONGODB_URI || 'mongodb://localhost:27017/site_peche'}`);
 });
 
 // Handle unhandled promise rejections
